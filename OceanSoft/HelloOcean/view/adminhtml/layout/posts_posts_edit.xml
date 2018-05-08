@@ -1,0 +1,26 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="OceanSoft\HelloOcean\Block\Adminhtml\Posts\Edit" name="oceansoft_helloocean_post_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+
+            <block class="OceanSoft\HelloOcean\Block\Adminhtml\Posts\Edit\Tabs" name="oceansoft_helloocean_post_tabs">
+             <!--<block type="adminhtml/store_switcher" name="store_switcher" before="-" />-->
+                <!--<block class="OceanSoft\HelloOcean\Block\Adminhtml\Posts\Edit\Tab\Info" name="oceansoft_helloocean_posts_edit_tab_post"/>-->
+                <!--<action method="addTab">-->
+                    <!--<argument name="name" xsi:type="string">post</argument>-->
+                    <!--<argument name="block" xsi:type="string">oceansoft_helloocean_posts_edit_tab_post</argument>-->
+                <!--</action>-->
+            </block>
+        </referenceContainer>
+    </body>
+</page>
